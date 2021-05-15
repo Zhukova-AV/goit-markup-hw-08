@@ -1,7 +1,8 @@
 .social-list {
     display: flex;
-    justify-content: space-between;
-    margin: 0;
+    // justify-content: space-between;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .social-list__link {
@@ -29,6 +30,12 @@
 
     .social-list__link:hover & {
         fill: $text-color-white;
+    }
+}
+
+.social-list__item {
+    &:not(:last-child) {
+        margin-right: 10px;
     }
 }
 

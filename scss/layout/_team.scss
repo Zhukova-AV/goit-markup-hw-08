@@ -1,44 +1,80 @@
-// .team {
-//     display: flex;
-//     justify-content: space-between;
-// }
+.team {
+    @media screen and (min-width: 767px) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+}
 
-// .team__item {
-//     display: block;
-//     background-color: $text-color-white;
-//     text-align: center;
-//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//         0px 2px 1px rgba(0, 0, 0, 0.2);
-//     border-radius: 0px 0px 4px 4px;
-// }
+.team__item {
+    width: 450px;
+    margin: 0 auto;
+    display: block;
+    background-color: $text-color-white;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 
-// .team__dscr {
-//     width: 270px;
-//     padding-top: 30px;
-//     padding-bottom: 30px;
-//     padding-left: 32px;
-//     padding-right: 32px;
-// }
+    @media screen and (min-width: 768px) {
+        width: 354px;
+        margin: 15px;
+    }
 
-// .team__card-title {
-//     margin-bottom: 10px;
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
 
-//     color: $primary-text-color;
+    & + & {
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+        }
+    }
+}
 
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 1.18;
-// }
+.team__dscr {
+    // width: 270px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    // padding-left: 32px;
+    // padding-right: 32px;
+}
 
-// .team__card-text {
-//     color: $text-color-light;
+.team__card-title {
+    margin-bottom: 10px;
 
-//     font-size: 16px;
-//     line-height: 1.18;
+    color: $primary-text-color;
 
-//     margin-bottom: 16px;
-// }
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+}
 
-// .team__card-img {
-//     display: block;
-// }
+.team__card-text {
+    color: $text-color-light;
+
+    font-size: 16px;
+    line-height: 1.18;
+
+    margin-bottom: 16px;
+}
+
+.team__card-img {
+    margin: 0 auto;
+
+    // @media screen and (min-width: 1200px) {
+    //     width: 270px;
+    //     height: 260px;
+    // }
+
+    // @media screen and (min-width: 768px) {
+    //     width: 354px;
+    //     height: 374px;
+    // }
+
+    // @media screen and (max-width: 480px) {
+    //     width: 450px;
+    //     height: 460px;
+    // }
+}

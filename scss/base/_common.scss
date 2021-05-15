@@ -32,6 +32,12 @@ p {
     padding: 0;
 }
 
+img {
+    min-width: 100%;
+    display: block;
+    height: auto;
+}
+
 .list {
     padding-inline: 0;
     margin: 0;
@@ -57,14 +63,22 @@ p {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     &:nth-child(2n + 4) {
         background-color: $bgc-color-secondary;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
     }
 }
 
 .section__no-padding {
     padding-bottom: 0;
+    @media screen and (min-width: 798px) {
+        margin-bottom: 15px;
+    }
 }
