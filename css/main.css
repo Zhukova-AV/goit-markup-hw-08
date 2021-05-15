@@ -131,16 +131,18 @@ img {
 }
 
 .btn {
-  align-items: center;
   cursor: pointer;
   border-radius: 4px;
   border: 3px solid transparent;
 }
 
 .btn__primary {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  padding: 10px 32px;
+  width: 200px;
+  height: 50px;
   color: #ffffff;
   background-color: #2196f3;
   font-weight: 700;
@@ -921,5 +923,127 @@ img {
 
 .client__box:hover .client__icon {
   fill: #2196f3;
+}
+
+.footer {
+  background-color: #2f303a;
+  width: 100%;
+}
+
+.footer__address {
+  margin-top: 20px;
+  font-style: normal;
+  line-height: 1.71;
+  color: #ffffff;
+}
+
+.footer-box {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-box {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-box__tablet {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-box__tablet {
+    justify-content: space-between;
+    margin-left: 76px;
+    margin-right: 89px;
+  }
+}
+
+.footer-box__social {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-box__social {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-box__social {
+    margin-left: 70px;
+  }
+}
+
+.address__link {
+  display: block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address__link:hover, .address__link:focus {
+  color: #2196f3;
+}
+
+.address__item {
+  margin-top: 8px;
+}
+
+.box-title--footer {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer__sign-form {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__sign-form {
+    margin-top: 0;
+    margin-left: 93px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sign-form form {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sign-form__icon {
+  margin-left: 10px;
+}
+
+.sign-form__input {
+  width: 450px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .sign-form__input {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
