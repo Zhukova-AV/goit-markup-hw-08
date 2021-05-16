@@ -59,9 +59,20 @@ img {
 
 .container {
   margin: 0 auto;
-  width: 480px;
   padding: 0 15px;
   outline: 1px solid red;
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    min-width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -398,13 +409,21 @@ img {
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1); */
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
+  padding: 40px;
   background-color: #ffffff;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* .backdrop--is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.6);
 } */
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__btn-close {
@@ -434,8 +453,6 @@ img {
 .modal__form {
   display: block;
   margin: 0 auto;
-  padding-top: 40px;
-  width: 448px;
   text-align: start;
 }
 
@@ -499,6 +516,7 @@ img {
 .modal__input--check {
   position: absolute;
   appearance: none;
+  opacity: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -693,28 +711,46 @@ img {
   padding-bottom: 118px;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile-hero-bg.jpg), url(../images/hero/mobile-hero-bg@2x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile-hero-bg.jpg);
   background-color: #2f303a;
   background-repeat: no-repeat;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .main-section {
+    background-image: url(../images/hero/mobile-hero-bg@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .main-section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet-hero-bg.jpg), url(../images/hero/tablet-hero-bg@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet-hero-bg.jpg);
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .main-section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop-hero-bg.jpg), url(../images/hero/desktop-hero-bg@2x.jpg);
+    background-image: url(../images/hero/tablet-hero-bg@2x.jpg);
   }
 }
 
-.main-section .main-section .container {
+@media screen and (min-width: 1200px) {
+  .main-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop-hero-bg.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .main-section {
+    background-image: url(../images/hero/desktop-hero-bg@2x.jpg);
+  }
+}
+
+.main-section .container {
   text-align: center;
 }
 
-.main-section .main-section__title {
+.main-section__title {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 900;
@@ -726,14 +762,14 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .main-section .main-section__title {
+  .main-section__title {
     margin-right: 189px;
     margin-left: 189px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .main-section .main-section__title {
+  .main-section__title {
     font-size: 44px;
     line-height: 1.36;
   }
@@ -783,7 +819,11 @@ img {
   padding-top: 25px;
   padding-bottom: 25px;
   text-align: center;
-  background-color: lawngreen;
+  background-color: #f5f4fa;
+}
+
+.box-title--feature {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -837,7 +877,7 @@ img {
 }
 
 .team__item {
-  width: 450px;
+  width: 100%;
   margin: 0 auto;
   display: block;
   background-color: #ffffff;
@@ -883,10 +923,6 @@ img {
   font-size: 16px;
   line-height: 1.18;
   margin-bottom: 16px;
-}
-
-.team__card-img {
-  margin: 0 auto;
 }
 
 .client {
@@ -1026,7 +1062,7 @@ img {
 }
 
 .sign-form__input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -1039,11 +1075,109 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .sign-form__input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .sign-form__input {
     width: 358px;
     margin-bottom: 0;
     margin-right: 12px;
   }
+}
+
+.filters {
+  background-color: indianred;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+
+.filters__item {
+  margin-bottom: 15px;
+}
+
+.filters__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.project {
+  margin: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.project__title {
+  margin-bottom: 4px;
+  color: #212121;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project__text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.project__item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 15px;
+}
+
+.project__item:hover, .project__item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project__dscr {
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px;
+}
+
+.project__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project__item:hover .project__overlay {
+  transform: translateY(0);
+}
+
+.project__overlay--text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

@@ -8,7 +8,8 @@
 }
 
 .team__item {
-    width: 450px;
+    // width: 450px;
+    width: 100%;
     margin: 0 auto;
     display: block;
     background-color: $text-color-white;
@@ -60,21 +61,21 @@
     margin-bottom: 16px;
 }
 
-.team__card-img {
-    margin: 0 auto;
+// .team__card-img {
+//     margin: 0 auto;
 
-    // @media screen and (min-width: 1200px) {
-    //     width: 270px;
-    //     height: 260px;
-    // }
+// @media screen and (min-width: 1200px) {
+//     width: 270px;
+//     height: 260px;
+// }
 
-    // @media screen and (min-width: 768px) {
-    //     width: 354px;
-    //     height: 374px;
-    // }
+// @media screen and (min-width: 768px) {
+//     width: 354px;
+//     height: 374px;
+// }
 
-    // @media screen and (max-width: 480px) {
-    //     width: 450px;
-    //     height: 460px;
-    // }
-}
+// @media screen and (max-width: 480px) {
+//     width: 450px;
+//     height: 460px;
+// }
+// }
