@@ -11,9 +11,9 @@
 .navigation__item {
     @media screen and (max-width: 767px) {
         padding-bottom: 32px;
-        &:last-child {
-            padding-bottom: 302px;
-        }
+        // &:last-child {
+        //     padding-bottom: 302px;
+        // }
     }
 
     @media screen and (min-width: 768px) {

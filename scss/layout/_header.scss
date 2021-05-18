@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 50;
     @media screen and (min-width: 320px) {
         height: 60px;
     }
@@ -26,6 +27,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    // height: 100vh;
     padding-top: 48px;
     padding-left: 40px;
 
@@ -33,14 +35,13 @@
 
     &.is-open {
         display: block;
-    }
-
-    @media screen and (min-width: 768px) {
-        padding: 0;
-        position: relative;
-        display: flex;
-        // background-color: transparent;
-        align-items: center;
+        @media screen and (min-width: 768px) {
+            padding: 0;
+            position: relative;
+            display: flex;
+            // background-color: transparent;
+            align-items: center;
+        }
     }
 }
 
@@ -79,7 +80,10 @@
 
 .mobile-social__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 48px;
+    margin-top: 64px;
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -95,8 +99,8 @@
 }
 
 .mobile-social__item {
-    margin-bottom: 48px;
-    margin-top: 64px;
+    // margin-bottom: 48px;
+    // margin-top: 64px;
 
     &--palka {
         display: inline-block;
